@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>My Vue web component</title>
+    <style>
+      body {
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      my-web-component {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      my-web-component::before {
+        content: "👋 ";
+        font-size: 24px;
+      }
+
+      my-web-component[msg="Sumu says hi!"] {
+        border: 2px solid #4CAF50;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need javascript.</noscript>
+    <my-web-component msg="Sumu says hi!"></my-web-component>
+
+    <!-- Assume the actual definition of my-web-component -->
+    <script>
+      // Your Vue component definition goes here
+    </script>
+  </body>
+</html>
